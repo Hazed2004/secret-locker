@@ -27,6 +27,31 @@ export async function requestWtoken(url, token) {
     }
 }
 
+export async function sendRequestWithTokenAndData(url, token, secretValue) {
+    try {
+        const response = await axios({
+            method: 'post',
+            url: url,
+            headers: {
+                'accept': 'application/json',
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
+            data: {
+                secret: secretValue 
+            }
+        });
+
+        console.log("Response:", response.data);
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+
+
+
+
 export function elementManipulationTXT(eleid, content) {
     document.getElementById(eleid).innerText = content;
 }

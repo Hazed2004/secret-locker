@@ -35,7 +35,7 @@ async def get_current_user(token: str = Depends(oauth2_scheme), db: AsyncSession
         raise credentials_exception
     return user
 
-@router.get("/add_secret", response_model=UserData)
+@router.post("/add_secret", response_model=UserData)
 async def get_user(user_secret: SecretParse, current_user: models.User = Depends(get_current_user), db: AsyncSession = Depends(get_db)):
     
     await db.execute(

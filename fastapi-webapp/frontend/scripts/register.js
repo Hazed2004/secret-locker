@@ -10,7 +10,6 @@ document.getElementById('registerButton').addEventListener('click', async functi
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     const passwordC = document.getElementById('passwordC').value;
-    const checkbox = document.getElementById('termscheck');
 
     if (username.length < 1){
         elementManipulationERROR('alert', 'Invalid Username');
