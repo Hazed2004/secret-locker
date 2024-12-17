@@ -7,3 +7,7 @@ how to run:
   run the main.py in the backend to start the fastapi server
   serve the frontend with any webserver (example apache2, python http.server etc)
   swagger UI is available in the /docs endpoint
+
+![App Screenshot](images/log.png)
+![App Screenshot](images/reg.png)
+![App Screenshot](images/ui.png)
